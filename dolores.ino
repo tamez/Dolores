@@ -21,9 +21,10 @@ SoftwareSerial ble1(10, 11); // RX 10, TX 11
 
 void setup(void)
 { 
-  // We can support much higher speeds than 9600, but let's stick with this for now.
-  ble0.begin(9600);
-  ble1.begin(9600);
+  // We can support higher speeds than 57600, but this is what's preprogrammed
+  //  on the TI BLE chip.
+  ble0.begin(57600);
+  ble1.begin(57600);
 }
 
 void loop()

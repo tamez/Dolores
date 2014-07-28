@@ -13,8 +13,10 @@
 //  Arduino serial console for debugging!
 // If we need to, it may be possible to create 2 Software serial ports
 //  if we are very careful and make the appropriate sacrifices to the C gods.
-#define ble0 Serial // RX 0, TX 1
-SoftwareSerial ble1(10, 11); // RX 10, TX 11
+
+                                // BLE#   RX   TX   VIN   BLE ROLE      CONNECTED TO
+#define ble0 Serial             // 0      0    1    4     PERIPHERAL    PHONE
+SoftwareSerial ble1(10, 11);    // 1      10   11   5     PERIPHERAL    OTHER DEVICE
 
 #define btnPin -1 // what pin is this on again?
 #define ledPin 13
